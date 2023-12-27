@@ -1,0 +1,248 @@
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 400;
+    src: url('./fonts/Montserrat-VariableFont_wght.ttf');
+  }
+
+  @font-face{
+    font-family: 'Fraunces';
+    font-style: normal;
+    font-weight: 700;
+    src: url('./fonts/Fraunces-VariableFont_SOFT\,WONK\,opsz\,wght.ttf');
+  }
+  
+:root{
+    --ff-montserrat: 'Montserrat', sans-serif;
+    --ff-fraunces: 'Fraunces', arial;
+
+    --fw-normal: 500;
+    --fw-bold: 700;
+
+    --fs-500: 0.875rem;
+    --fs-600: 1rem;
+    --fs-700: 2.5rem;
+    --fs-900: 3rem;
+
+    --cl-primary-100: hsl(30, 38%, 92%);
+    --cl-primary-200: hsl(158, 36%, 37%);
+       
+    --cl-neutral-100: hsl(0, 0%, 100%);
+    --cl-neutral-200: hsl(228, 12%, 48%);
+    --cl-neutral-300:  hsl(212, 21%, 14%);
+}
+
+*,
+*::before,
+*::after{
+    box-sizing: border-box;
+}
+
+html{
+    font-family: var(--ff-montserrat);
+    font-weight: var(--fw-normal);
+    line-height: 1.2;
+}
+
+body{
+    margin: 0;
+    background: var(--cl-primary-100);
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+    display: block;
+}
+
+h1,
+h2,
+h3{
+    font-family: var(--ff-fraunces);
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-700);
+}
+
+.container{
+    background-color: var(--cl-neutral-100);
+    margin: 7% auto;
+    max-width: 50%;
+    max-height: 100%;
+    border-radius: 10px;
+    display: flex;
+}
+
+.container> *{
+    flex: 1;
+}
+
+.left-section{
+    max-width: 100%;
+}
+
+img.img-desktop{
+    max-width: 100%;
+    border-radius: 10px 0 0 10px;
+}
+
+img.img-mobile{
+    display: none;
+}
+
+.right-section{
+    padding: 1.5rem 3rem;
+    max-width: 50%;
+}
+
+p#item{
+    text-transform: uppercase;
+    letter-spacing: 0.5rem;
+    font-weight: var(--fw-bold);
+    font-size: var(--fs-500);
+    color: var(--cl-neutral-200);
+}
+
+h1#name{
+    display: inline-block;
+    color: var(--cl-neutral-300);
+    font-weight: var(--fw-bold);
+    line-height: 1rem;
+}
+
+p#description{
+    font-weight: var(--fw-normal);
+    font-size: var(--fs-600);
+    line-height: 1.5rem;
+    color: var(--cl-neutral-200);
+}
+
+.price{
+    display: flex;
+    justify-content: left;
+    align-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+h1#promo-price{
+    color: var(--cl-primary-200);
+}
+
+p#actual-price{
+    text-decoration: line-through;
+    color: var(--cl-neutral-200);
+}
+
+.button{
+    padding: 1.2rem;
+    background-color: var(--cl-primary-200);
+    border: none;
+    border-radius: 10px;
+    color: var(--cl-neutral-100);
+    font-weight: var(--fw-bold);
+    font-family: var(--ff-montserrat);
+    text-align: center;
+}
+
+img.cart-icon{
+    display: inline-block;
+    padding-right: 0.7rem;
+}
+
+.button:hover{
+    cursor: pointer;
+    background-color: hsl(158, 36%, 20%);
+}
+
+.button:active{
+    background-color: hsl(158, 36%, 20%);
+}
+
+ .attribution{
+    display: block;
+    text-align: center;
+ }
+
+ .attribution> a{
+    text-decoration: none;
+    font-weight: var(--fw-bold);
+    color: var(--cl-primary-200);
+    padding-bottom: 2rem;
+ }
+
+@media screen and (max-width: 1080px){
+    h1,
+    h2,
+    h3{
+    font-family: var(--ff-fraunces);
+    font-weight: var(--fw-bold);
+    font-size: 1.7rem;
+    }
+    
+    .container{
+        display: flex;
+        flex-direction: column;
+        max-width: 90%;
+        max-height: 100%;
+        line-height: 1.5rem;
+    }
+
+    .left-section{
+        max-width: 100%;
+    }
+
+    img.img-mobile{
+        display: block;
+        max-width: 100%;
+        border-radius: 10px 10px 0 0;
+    }
+    
+    img.img-desktop{
+        display: none;
+    } 
+    
+    .right-section{
+        max-width: 100%;
+        padding: 1.2rem;
+    }
+
+    p#item{
+        text-transform: uppercase;
+        letter-spacing: 0.5rem;
+        font-weight: var(--fw-bold);
+        font-size: var(--fs-500);
+        color: var(--cl-neutral-200);
+    }
+    
+    h1#name{
+        display: inline-block;
+        color: var(--cl-neutral-300);
+        font-weight: var(--fw-bold);
+        line-height: 1rem;
+        font-size: var(--fs-600);
+    }
+    
+    p#description{
+        font-weight: var(--fw-normal);
+        font-size: var(--fs-500);
+        line-height: 1.5rem;
+        color: var(--cl-neutral-200);
+    }
+    
+    .price{
+        display: flex;
+        justify-content: left;
+        align-content: center;
+        align-items: center;
+        gap: 1.5rem;
+    }
+    
+    h1#promo-price{
+        color: var(--cl-primary-200);
+    }
+    
+    p#actual-price{
+        text-decoration: line-through;
+        color: var(--cl-neutral-200);
+    }
+}
